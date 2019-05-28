@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataServiceCPUTipus</name>
+    </assembly>
+    <members>
+        <member name="T:DataServiceInterface.BundleConfig">
+            <summary>
+            Kliens oldali csomagok csatolása a projekthez.
+            </summary>
+        </member>
+        <member name="M:DataServiceInterface.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+            <summary>
+            For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
+            </summary>
+            <param name="bundles"></param>
+        </member>
+        <member name="T:DataServiceInterface.SwaggerConfig">
+            <summary>
+            Swagger eszközt használunk a Web API automata dokumentálásához.
+            </summary>
+        </member>
+        <member name="M:DataServiceInterface.SwaggerConfig.Register">
+            <summary>
+            Swagger eszköz regisztrálása.
+            </summary>
+        </member>
+        <member name="T:DataServiceInterface.Controllers.Functions.MicroserviceOutputController`2">
+            <summary>
+            Microservice  kontroller osztály. A webservice hívást innen vezéreljük.
+            </summary>
+        </member>
+        <member name="M:DataServiceInterface.Controllers.Functions.MicroserviceOutputController`2.Post(`1,System.String)">
+            <summary>
+            Az adott microservicet visszaadó webservice.
+            </summary>
+            <param name="InterfaceInputData"></param>
+            <returns>MicroserviceInterfaceOutput objektumok listája</returns>
+        </member>
+        <member name="T:DataServiceInterface.Controllers.HomeController">
+            <summary>
+            Web API által generált objektum.
+            A web service kezdőlapját kezeli.
+            </summary>
+        </member>
+        <member name="M:DataServiceInterface.Controllers.HomeController.Index">
+            <summary>
+            Webservice kezdő lapja. Web API álatal generált.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DataServiceInterface.Models.CPUTipusInterfaceOutput">
+            <summary>
+            CPU típusok webservice kimeneti paramétereit tartalmazó osztály.
+            </summary>
+        </member>
+        <member name="P:DataServiceInterface.Models.CPUTipusInterfaceOutput.Id">
+            <summary>
+            CPUTipusok adatbázisbeli technikai azonosítója. Rendszer tulajdonság.
+            Értékkészlete : 1 .. N
+            </summary>
+        </member>
+        <member name="P:DataServiceInterface.Models.CPUTipusInterfaceOutput.Aktiv">
+            <summary>
+            CPUTipusok állaptotát tároló mező.
+            Értékkészlete : "Y", "N"
+            </summary>
+        </member>
+        <member name="P:DataServiceInterface.Models.CPUTipusInterfaceOutput.NyelvKod">
+            <summary>
+            CPUTipus lokalizációjához használt nyelvi kód. ISO formátumú.
+            Értékkészlete : "hu-hu", "de-de"
+            </summary>
+        </member>
+        <member name="P:DataServiceInterface.Models.CPUTipusInterfaceOutput.CpuTipusNev">
+            <summary>
+            CPUTipus neve a korábban említett nyelv kód szerint.
+            Értékkészlete : egy soros szöveg
+            </summary>
+        </member>
+        <member name="P:DataServiceInterface.Models.CPUTipusInterfaceOutput.Sorrend">
+            <summary>
+            Megjelenítési sorrend.
+            Értékkészlete : Pozitív egész számok
+            </summary>
+        </member>
+        <member name="T:DataServiceInterface.Models.CPUTipusInterfaceInput">
+            <summary>
+            CPUTipus webservice meghívázáshoz használható 
+            kimeneti paramétereit tartalmazó osztály.
+            </summary>
+        </member>
+        <member name="P:DataServiceInterface.Models.CPUTipusInterfaceInput.Id">
+            <summary>
+            Bemenő paraméter. Az példány adatbázisbeli technikai azonosítója. Rendszer tulajdonság.
+            Értékkészlete : 1 és attól nagyobb számok.
+            Ha nem adunk meg értéket, akkor ezen mezőt nem vesszük figyelembe a kimeneti adatok szűrésénél.
+            </summary>
+        </member>
+        <member name="P:DataServiceInterface.Models.CPUTipusInterfaceInput.Aktiv">
+            <summary>
+            Bemenő paraméter. Aktív vagy inaktív állapotot lehet megadni.
+            Értékkészlete : "Y", "N"
+            Ha nem adunk meg értéket akkor az "Y"-nal egyenlő.
+            </summary>
+        </member>
+        <member name="P:DataServiceInterface.Models.CPUTipusInterfaceInput.NyelvKod">
+            <summary>
+            Bemenő paraméter. Nyelvi megjelenítéseket tároló mező.
+            Értékkészlete : "hu-hu", "de-de"
+            Ha nem adunk meg értéket, akkor a "hu-hu" alapértelmezett érték kerül megadásra.
+            Ezen mezőt nem vesszük figyelembe a kimeneti adatok szűrésénél.
+            </summary>
+        </member>
+        <member name="T:DataServiceInterface.Models.DataAccessLayer`2">
+            <summary>
+            Az adatbázisból az sql parancsnak megfelelő adatokat adja vissza.
+            </summary>
+        </member>
+        <member name="M:DataServiceInterface.Models.DataAccessLayer`2.GetModelListFromDataBase(`1)">
+            <summary>
+            Adatbázis tárolt eljáráson keresztül visszaadja az adat objektumok listáját.
+            Forrása az adatbázis. 
+            </summary>
+            <param name="inputInterfaceProperties"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
