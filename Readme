@@ -1,0 +1,3 @@
+This Micro service use native data bindig insted of Entity framework. Thus, it helps us parry SQL injection(it calls a stored procedure)
+and maintaning high performanced in multilanguage enviroment(localized data).
+It provides a Post that can be called with REST Api call or for representation purpose via SWAGGER UI.
